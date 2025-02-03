@@ -1,0 +1,59 @@
+{
+  "name": "the-ordinary-unofficial-api",
+  "version": "0.0.1",
+  "description": "An Unofficial API for The Ordinary",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui --coverage",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "npm run build",
+    "type-check": "tsc --noEmit --project src/tsconfig.json",
+    "type-check-tests": "tsc --noEmit --project tests/tsconfig.json",
+    "api-extractor": "api-extractor run --local --verbose --config api-extractor.json",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [
+    "the-ordinary",
+    "skincare"
+  ],
+  "author": "Melissa McEwen",
+  "license": "MIT",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.48.0",
+    "@microsoft/tsdoc": "^0.15.1",
+    "@types/node": "^20.17.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
+    "commander": "^12.1.0",
+    "eslint": "^8.0.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
+    "eslint-plugin-import": "^2.25.0",
+    "json-2-csv": "^5.5.7",
+    "knip": "^5.40.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.8"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
