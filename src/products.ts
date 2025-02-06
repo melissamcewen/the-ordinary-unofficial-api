@@ -77,7 +77,7 @@ export const products: { [key: string]: Product } = {
     Phase: 'Water',
     Format: 'Serum',
     Excludes: ['Direct Vitamin C', 'Indirect Vitamin C'],
-    Tags: [],
+    Tags: ['Niacinamide'],
     id: 'niacinamide-10-zinc-1',
     KeyIngredients: 'Niacinamide, Zinc PCA',
     Ingredients:
@@ -713,7 +713,7 @@ export const products: { [key: string]: Product } = {
     Phase: 'Water',
     Format: 'Serum',
     Excludes: [],
-    Tags: [],
+    Tags: ['Active Other'],
     id: 'alpha-arbutin-2-ha',
   },
   'hyaluronic-acid-2-b5-original-formulation': {
@@ -785,7 +785,7 @@ export const products: { [key: string]: Product } = {
     Phase: 'Water',
     Format: 'Serum',
     Excludes: ['Direct Vitamin C', 'Indirect Vitamin C'],
-    Tags: [],
+    Tags: ['Niacinamide'],
     id: 'niacinamide-5-face-and-body-emulsion',
   },
   'balancing-clarifying-serum': {

@@ -1,7 +1,7 @@
 {
   "name": "the-ordinary-unofficial-api",
-  "version": "0.0.1",
-  "description": "An Unofficial API for The Ordinary",
+  "version": "1.0.0",
+  "description": "Unofficial API for The Ordinary skincare products",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +17,8 @@
     "type-check-tests": "tsc --noEmit --project tests/tsconfig.json",
     "api-extractor": "api-extractor run --local --verbose --config api-extractor.json",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "cli:fields": "tsx cli/get-fields.ts"
   },
   "keywords": [
     "the-ordinary",
@@ -39,10 +40,10 @@
     "eslint-plugin-import": "^2.25.0",
     "json-2-csv": "^5.5.7",
     "knip": "^5.40.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11",
-    "vite-plugin-dts": "^4.3.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6",
+    "vite-plugin-dts": "^3.7.3",
     "vitest": "^2.1.8"
   },
   "files": [
@@ -55,5 +56,8 @@
       "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
     }
+  },
+  "bin": {
+    "ordinary-fields": "./cli/get-fields.ts"
   }
 }
